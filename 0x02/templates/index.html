@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block body %}
+    {% if session %}
+    <h1>Cogratualtions!</h1>
+    <p>You can only see this content once logged in (wink)</p>
+    <p>Would like to <a href="{{ url_for('logout') }}">Logout</a> now?</p>
+    {% else %}
+    <p>do you want to <a href="{{ url_for('login') }}">Login</a>?</p>
+    <p>Are you new would you like to <a href="{{ url_for('add_user' )}}">create an account</a></p>
+    {% endif %}
+{% endblock %}

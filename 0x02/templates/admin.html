@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block body %}
+    {% if session %}
+    <ul>
+        {% for user in user_list %}
+            <li>
+                <p>user: {{ user['username'] }}</p>
+                <p>password: {{ user['password'] }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+    <p>Would like to <a href="{{ url_for('logout') }}">Logout</a> now?</p>
+    {% else %}
+<div class="container">
+    <form method="post">
+        <h3>Sign in</h3>
+        <p><input type="text" name="username" value="{{ request.form.username }}" placeholder="username" required></p>
+        <p><input type="password" name = "password" placeholder="passsword" required></p>
+        <p><input type="submit" value="submit" ></p>
+        <p>new regular user? <a href="{{ url_for('add_user' )}}">create an account</a></p>
+        <p>Already have a user account?<a href="{{ url_for('login') }}">  Login</a> instead</p>
+    </form>
+</div>
+    {% endif %}
+
+{% endblock %}

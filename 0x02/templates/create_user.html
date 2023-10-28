@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="container">
+    <form method="post">
+        <h3>Sign up</h3>
+        <p><input type="text" name="username" id="" value = "{{ request.form.username }}" placeholder="username" required></p>
+        <p><input type="passsword" name="password" placeholder="password" required></p>
+        <p><input type="submit" value="submit"></p>
+        <p>Already have an account?<a href="{{ url_for('login') }}">  Login</a> instead.</p>
+    </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,79 @@
+*{
+    font-family: chivo,  sans-serif;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    background-color: black;
+    color: coral;
+    height: 100vh;
+    overflow: hidden;
+}
+.message{
+    width: 100%;
+    height: min-content;
+    background-color: black;
+    color: green;
+    text-align: center;
+    padding: 6px;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.error{
+    width: 100%;
+    padding: 6px;
+    height: min-content;
+    background-color: red;
+    color: aliceblue;
+}
+form{
+    width: 40%;
+    height: 430px;
+    border-radius: 16px;
+    background-color: rgba(197, 191, 181, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+form h3{
+    text-align: center;
+
+}
+form p{
+    width: 80%;
+    margin: auto;
+}
+input{
+    width: 100%;
+    margin: auto;
+    border: 1px solid black;
+    color: coral;
+    background-color: rgba(197, 191, 181, 0.1);
+    padding: 10px;
+    border-radius: 16px;
+}
+input[type = 'submit']{
+    background-color: coral;
+    color: black;
+    transition: all 300ms ease-in-out;
+}
+
+input[type = 'submit']:hover{
+    background-color: rgb(235, 72, 13);
+
+}
+
+.page_not_found{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
